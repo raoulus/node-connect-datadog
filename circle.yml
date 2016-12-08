@@ -1,0 +1,21 @@
+machine:
+  node:
+    version: 6.0.0
+
+test:
+  override:
+    - echo "no tests"
+
+deployment:
+  feature:
+    branch: /feature.*/
+    commands:
+      - npm publish
+  bugfix:
+    branch: /bugfix.*/
+    commands:
+      - npm publish
+  prod:
+    branch: master
+    commands:
+      - npm publish
