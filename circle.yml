@@ -7,14 +7,6 @@ test:
     - echo "no tests"
 
 deployment:
-  feature:
-    branch: /feature.*/
-    commands:
-      - npm publish
-  bugfix:
-    branch: /bugfix.*/
-    commands:
-      - npm publish
   prod:
     branch: master
     commands:
